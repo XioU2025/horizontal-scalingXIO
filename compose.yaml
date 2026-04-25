@@ -17,4 +17,7 @@ services:
     working_dir: /app
     command: node src/server.js
     deploy:
-      replicas: 3
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
